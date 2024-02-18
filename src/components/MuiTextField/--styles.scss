@@ -1,0 +1,91 @@
+@import "../../mui/palette.scss";
+@import "../../mui/typography.scss";
+@import "../../mui//spacing.scss";
+
+.MuiTextField-root {
+  width: --viw(360);
+  height: --vih(56);
+  label {
+    font-size: --vih(16);
+    transform: translate(1vw, 1.5vh) scale(1.1);
+    max-width: calc(100% - (--viw(24)));
+  }
+  label.MuiInputLabel-shrink {
+    transform: translate(1vw, 0.5vh) scale(0.75);
+    max-width: calc(133% - (--viw(24)));
+    color: var(--palette-primary-primary1EquitasBlueneutralLightest);
+    &.Mui-disabled {
+      color: var(--palette-primary-neutralDarkNeutralLightest);
+      opacity: 0.4;
+    }
+  }
+  label.Mui-focused {
+    transform: translate(1vw, 0.5vh) scale(0.75);
+    max-width: calc(133% - (--viw(24)));
+  }
+  .MuiFormHelperText-root {
+    margin-left: --viw(12);
+    margin-top: --vih(5);
+    position: absolute;
+
+    top: 100%;
+    font-family: $poppins400;
+
+    font-size: --vih(12);
+  }
+
+  :-webkit-autofill:focus,
+  :-webkit-autofill:hover,
+  :-webkit-autofill:active,
+  :-webkit-autofill {
+    height: 0 !important;
+    -webkit-box-shadow: 0 0 0 30px
+      var(--palatte-tertiary-lightIvoryprimary1Shade60) inset !important;
+    border-top-right-radius: unset;
+    border-top-left-radius: unset;
+  }
+}
+
+.MuiFilledInput-input,
+.MuiFilledInput-root,
+.MuiFilledInput-input.Mui-disabled,
+.MuiFilledInput-root:hover,
+.MuiFilledInput-root.Mui-focused {
+  height: --vih(56);
+  font-size: --vih(16);
+  padding-top: --vih(29);
+  border-bottom: none;
+}
+.MuiFilledInput-root:after {
+  border-bottom: none !important;
+}
+
+.MuiFilledInput-root.Mui-disabled,
+.MuiFilledInput-root.Mui-disabled:hover {
+  background-color: var(--palette-neutral-muiSelectDisableColor);
+  border-bottom: none !important;
+}
+
+.MuiFilledInput-input {
+  padding-left: 1vw;
+}
+
+.MuiFilledInput-input.MuiInputBase-inputMultiline {
+  padding-right: --viw(10);
+  padding-bottom: --vih(5);
+}
+
+.registered-mobile-number,
+.forgotLogin__mobile-text-field {
+  .MuiFilledInput-input {
+    padding-left: 0;
+  }
+}
+
+.no-action_customer {
+  .Mui-disabled {
+    background-color: transparent;
+    color: currentColor;
+    -webkit-text-fill-color: currentColor;
+  }
+}
